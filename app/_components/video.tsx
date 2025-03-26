@@ -1,14 +1,20 @@
 'use client'
 
-import { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-export function Video({ src, caption, ratio }) {
+interface VideoProps {
+  src: string;
+  caption?: string;
+  ratio: number;
+}
+
+export function Video({ src, caption, ratio }: VideoProps) {
   const [inViewRef, inView] = useInView({ threshold: 1 })
-  const videoRef = useRef()
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
   const setRefs = useCallback(
-    node => {
+    (node: HTMLVideoElement | null) => {
       // Ref's from useRef needs to have the node assigned to `current`
       videoRef.current = node
       // Callback refs, like the one from `useInView`, is a function that takes the node as an argument

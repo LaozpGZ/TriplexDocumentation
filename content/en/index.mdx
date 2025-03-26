@@ -3,7 +3,7 @@ title: Decentralized Liquidity Provisioning Protocol
 searchable: false
 ---
 
-import { Callout, Tabs } from 'nextra/components'
+import { Callout, Tabs, Steps } from 'nextra/components'
 import { Features } from '@app/_components/features'
 import { SwrIcon } from '@app/_icons'
 
@@ -41,6 +41,20 @@ const { data } = useMarket('BTC-USDC')
 ## Ecosystem
 
 Triplex V3 consists of multiple core components: Vaults, Pools, Markets, and Rewards Allocators. These components work together to provide users with a highly flexible DeFi experience.
+
+<Steps>
+### Vaults
+Vaults serve as the liquidity foundation of Triplex, enabling users to deposit assets and earn yield.
+
+### Pools
+Pools aggregate liquidity from vaults and distribute it across various markets based on configurable parameters.
+
+### Markets
+Markets are where trading activities occur, including perpetual contracts, leverage tokens, and synthetic assets.
+
+### Rewards
+The rewards system incentivizes participation and governs the distribution of protocol fees.
+</Steps>
 
 Our growing ecosystem includes:
 
