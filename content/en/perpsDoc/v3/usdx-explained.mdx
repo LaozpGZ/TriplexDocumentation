@@ -1,52 +1,52 @@
-# 什么是USDx？
+# What is USDx?
 
-USDx是Triplex V3中的一个关键创新，它是平台内部使用的合成美元单位，用于处理多种抵押品类型并简化保证金会计处理。本文将详细解释USDx的概念、运作机制及其在Triplex生态系统中的重要性。
+USDx is a key innovation in Triplex V3, serving as a synthetic dollar unit used internally by the platform to handle multiple types of collateral and simplify margin accounting. This article will explain the concept of USDx, its operational mechanism, and its importance within the Triplex ecosystem.
 
-## USDx的基本概念
+## Basic Concept of USDx
 
-USDx本质上是一种内部记账单位，而不是可交易的代币。它代表了存入Triplex账户的各种抵押品的美元价值。这种统一的价值表示方式是多抵押品系统的核心组成部分，使平台能够一致地处理不同类型的资产。
+USDx is essentially an internal accounting unit rather than a tradable token. It represents the dollar value of various collaterals deposited into a Triplex account. This unified value representation is a core component of the multi-collateral system, enabling the platform to consistently handle different types of assets.
 
 import { Callout } from 'nextra/components'
 
 <Callout type="info">
-重要的是要理解USDx不是一种可提取或转移的代币，而是纯粹用于内部会计目的。
+It is important to understand that USDx is not a token that can be withdrawn or transferred; it is purely for internal accounting purposes.
 </Callout>
 
-### USDx与sUSD的区别
+### Difference Between USDx and sUSD
 
-在早期版本的平台中，sUSD作为主要的结算货币。USDx则是V3中的一种改进机制，专为处理多种抵押品类型而设计：
+In earlier versions of the platform, sUSD was used as the primary settlement currency. USDx is an improved mechanism in V3, designed specifically to handle multiple types of collateral:
 
-- **sUSD**：一种具体的合成代币，用户可以直接持有或交易。
-- **USDx**：一种内部记账单位，仅存在于Triplex系统内部，不可转移或交易。
+- **sUSD**: A specific synthetic token that users can directly hold or trade.
+- **USDx**: An internal accounting unit that exists only within the Triplex system and cannot be transferred or traded.
 
-## USDx的作用
+## Role of USDx
 
-USDx在Triplex生态系统中执行几个关键功能：
+USDx performs several key functions within the Triplex ecosystem:
 
-1. **价值统一**：将不同抵押品（如ETH、USDC、tBTC等）的价值转换为一个统一的单位。
-2. **保证金计算**：提供一个共同的计量单位，用于计算账户健康度和清算阈值。
-3. **头寸处理**：允许系统使用多种抵押品类型作为开仓和维持保证金。
-4. **风险管理**：使系统能够衡量不同抵押品的总风险敞口。
+1. **Value Unification**: Converts the value of different collaterals (such as ETH, USDC, tBTC, etc.) into a unified unit.
+2. **Margin Calculation**: Provides a common measurement unit for calculating account health and liquidation thresholds.
+3. **Position Handling**: Allows the system to use multiple types of collateral for opening and maintaining margin.
+4. **Risk Management**: Enables the system to measure the total risk exposure of different collaterals.
 
-## USDx的好处
+## Benefits of USDx
 
-USDx机制为Triplex用户提供了多种优势：
+The USDx mechanism offers several advantages to Triplex users:
 
-- **资本效率**：允许用户利用多种抵押品类型，而无需将所有资产转换为单一类型的稳定币。
-- **保持市场敞口**：用户可以保持对其抵押资产（如ETH、BTC等）的市场敞口，同时仍能利用这些资产的美元价值进行交易。
-- **简化的用户体验**：多种抵押品在后台无缝处理，为用户提供简洁统一的界面。
-- **减少滑点成本**：无需在开始交易前大量转换资产，从而减少了相关的滑点和交易费用。
+- **Capital Efficiency**: Allows users to utilize multiple types of collateral without needing to convert all assets into a single type of stablecoin.
+- **Maintain Market Exposure**: Users can maintain market exposure to their collateral assets (such as ETH, BTC, etc.) while still using the dollar value of these assets for trading.
+- **Simplified User Experience**: Seamless handling of multiple collaterals in the background provides users with a simple and unified interface.
+- **Reduced Slippage Costs**: Eliminates the need for large asset conversions before starting trading, reducing associated slippage and transaction fees.
 
 <Callout type="warning">
-虽然USDx提供了多种优势，用户仍应注意，波动性抵押品的价值变化会直接影响其账户健康度。市场波动可能导致需要追加保证金或面临清算风险。
+While USDx offers many advantages, users should be aware that changes in the value of volatile collateral directly affect their account health. Market fluctuations may lead to margin calls or liquidation risks.
 </Callout>
 
-## USDx与其他系统的比较
+## Comparison of USDx with Other Systems
 
-USDx与DeFi生态系统中的其他记账单位有一些相似之处，但也有重要的区别：
+USDx has some similarities with other accounting units in the DeFi ecosystem but also important differences:
 
-- **与Maker的DAI比较**：与DAI不同，USDx不是一种可交易的代币，而仅仅是内部记账单位。
-- **与Aave的aToken比较**：与aToken类似，USDx代表了用户资产的价值，但USDx不会随时间增值。
-- **与Compound的cToken比较**：与cToken不同，USDx不代表对流动性池的索取权。
+- **Comparison with Maker's DAI**: Unlike DAI, USDx is not a tradable token but merely an internal accounting unit.
+- **Comparison with Aave's aToken**: Similar to aToken, USDx represents the value of user assets, but USDx does not appreciate over time.
+- **Comparison with Compound's cToken**: Unlike cToken, USDx does not represent a claim on a liquidity pool.
 
-总之，USDx是一种专门为Triplex的多抵押品保证金系统设计的独特机制，旨在提高资本效率和风险管理。 
+In summary, USDx is a unique mechanism designed specifically for Triplex's multi-collateral margin system, aimed at enhancing capital efficiency and risk management. 

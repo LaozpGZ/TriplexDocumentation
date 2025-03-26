@@ -1,48 +1,48 @@
-# 交易教程
+# Trading Tutorial
 
-本教程将指导您完成在Triplex Exchange上开始交易的整个过程，从账户创建到开仓、平仓和管理您的资金。
+This tutorial will guide you through the entire process of starting to trade on Triplex Exchange, from account creation to opening, closing, and managing your funds.
 
-## 连接钱包和创建V3账户
+## Connect Wallet and Create V3 Account
 
 import { Callout } from 'nextra/components'
 import { Steps } from 'nextra/components'
 
 <Steps>
-### 连接兼容的钱包
+### Connect a Compatible Wallet
 
-首先，导航至[Triplex Exchange](https://exchange.triplex.io)，点击右上角的"连接钱包"按钮，并选择您喜欢的钱包提供商。支持的钱包包括：
+First, navigate to [Triplex Exchange](https://exchange.triplex.io), click the "Connect Wallet" button in the upper right corner, and select your preferred wallet provider. Supported wallets include:
 
 - MetaMask
 - WalletConnect
 - Coinbase Wallet
-- 其他以太坊兼容钱包
+- Other Ethereum-compatible wallets
 
 <Callout type="info">
-确保您已连接到Triplex支持的网络：Optimism、Base或Arbitrum。如果您尚未将资产桥接到这些网络，请先参阅我们的[桥接指南](./bridging)。
+Make sure you are connected to a network supported by Triplex: Optimism, Base, or Arbitrum. If you have not yet bridged assets to these networks, please refer to our [Bridging Guide](./bridging).
 </Callout>
 
-### 创建交易账户
+### Create a Trading Account
 
-连接钱包后，您需要创建一个V3交易账户：
+After connecting your wallet, you need to create a V3 trading account:
 
-1. 点击主界面上的"创建账户"按钮
-2. 阅读并同意服务条款
-3. 确认创建账户的交易（这需要支付一次性Gas费）
-4. 等待交易被确认
+1. Click the "Create Account" button on the main interface
+2. Read and agree to the terms of service
+3. Confirm the transaction to create the account (this requires a one-time gas fee)
+4. Wait for the transaction to be confirmed
 
-创建账户后，您将收到一个唯一的账户ID，用于识别您在Triplex上的所有活动和头寸。
+Once the account is created, you will receive a unique account ID to identify all your activities and positions on Triplex.
 
 <Callout type="warning">
-交易账户创建是一次性步骤，需要支付Gas费。如果您之前已经创建了账户，您可以直接导入您的现有账户。
+Account creation is a one-time step and requires a gas fee. If you have previously created an account, you can directly import your existing account.
 </Callout>
 </Steps>
 
-## 存入抵押品
+## Deposit Collateral
 
 <Steps>
-### 选择抵押品类型
+### Choose Collateral Type
 
-Triplex支持多种抵押品类型，包括：
+Triplex supports multiple types of collateral, including:
 
 - USDC
 - ETH/wETH
@@ -50,169 +50,169 @@ Triplex支持多种抵押品类型，包括：
 - USDe
 - stataUSDC
 
-选择您希望存入的抵押品类型。每种类型都有其优缺点，具体取决于您的交易策略和风险偏好。
+Choose the type of collateral you wish to deposit. Each type has its pros and cons, depending on your trading strategy and risk preference.
 
-### 存入资金
+### Deposit Funds
 
-1. 导航至"账户"部分
-2. 点击"存款"选项卡
-3. 选择您想要存入的资产
-4. 输入存款金额
-5. 批准合约使用您的代币（如果是首次存入该资产）
-6. 确认存款交易
-
-<Callout type="info">
-在您首次存入特定类型的代币时，您需要批准智能合约使用这些代币。这是一项额外的Gas交易，但仅需执行一次。
-</Callout>
-
-### 验证存款
-
-存款交易被确认后，资金应立即显示在您的账户余额中。您可以在"账户概览"部分查看您的所有抵押品余额。
-</Steps>
-
-## 兑换和桥接
-
-如果您需要将一种资产转换为另一种资产，或者将资产从一个网络转移到另一个网络，可以使用内置的兑换和桥接功能：
-
-<Steps>
-### 使用兑换功能
-
-1. 导航至"交易"部分中的"兑换"选项卡
-2. 选择源资产和目标资产
-3. 输入要兑换的金额
-4. 查看汇率和费用
-5. 确认兑换交易
+1. Navigate to the "Account" section
+2. Click the "Deposit" tab
+3. Select the asset you want to deposit
+4. Enter the deposit amount
+5. Approve the contract to use your tokens (if depositing this asset for the first time)
+6. Confirm the deposit transaction
 
 <Callout type="info">
-兑换功能允许您在不离开平台的情况下将一种资产换成另一种，这对于调整抵押品组合很有用。
+When depositing a specific type of token for the first time, you need to approve the smart contract to use these tokens. This is an additional gas transaction but only needs to be done once.
 </Callout>
 
-### 使用桥接功能
+### Verify Deposit
 
-1. 导航至"桥接"部分
-2. 选择源网络和目标网络
-3. 选择要桥接的资产和金额
-4. 确认桥接交易
-5. 等待资金在目标网络上到达（可能需要几分钟到几小时）
+Once the deposit transaction is confirmed, the funds should immediately appear in your account balance. You can view all your collateral balances in the "Account Overview" section.
 </Steps>
 
-## 启用一键交易
+## Swap and Bridge
 
-一键交易功能让您可以在不支付Gas费的情况下快速执行交易：
+If you need to convert one asset to another or transfer assets from one network to another, you can use the built-in swap and bridge features:
 
 <Steps>
-### 开启一键交易
+### Use the Swap Feature
 
-1. 导航至交易界面
-2. 找到"一键交易"切换开关并将其打开
-3. 阅读并同意相关条款
-4. 签署授权交易（一次性交易）
-5. 存入少量ETH作为Gas费用（这将用于支付您的交易Gas费）
+1. Navigate to the "Trade" section and click the "Swap" tab
+2. Select the source asset and target asset
+3. Enter the amount to swap
+4. Review the exchange rate and fees
+5. Confirm the swap transaction
+
+<Callout type="info">
+The swap feature allows you to exchange one asset for another without leaving the platform, which is useful for adjusting your collateral portfolio.
+</Callout>
+
+### Use the Bridge Feature
+
+1. Navigate to the "Bridge" section
+2. Select the source network and target network
+3. Choose the asset and amount to bridge
+4. Confirm the bridge transaction
+5. Wait for the funds to arrive on the target network (this may take a few minutes to a few hours)
+</Steps>
+
+## Enable One-Click Trading
+
+The one-click trading feature allows you to execute trades quickly without paying gas fees:
+
+<Steps>
+### Enable One-Click Trading
+
+1. Navigate to the trading interface
+2. Find the "One-Click Trading" toggle switch and turn it on
+3. Read and agree to the relevant terms
+4. Sign the authorization transaction (one-time transaction)
+5. Deposit a small amount of ETH as gas fees (this will be used to pay for your trade gas fees)
 
 <Callout type="warning">
-启用一键交易需要授予Triplex许可以代表您执行特定交易。此授权经过精心设计，仅限于必要的交易功能。
+Enabling one-click trading requires granting Triplex permission to execute certain trades on your behalf. This authorization is carefully designed and limited to necessary trading functions.
 </Callout>
 
-### 验证一键交易设置
+### Verify One-Click Trading Setup
 
-成功启用后，一键交易状态指示器将变为绿色，表示您现在可以不用签署每笔交易即可交易。
+Once successfully enabled, the one-click trading status indicator will turn green, indicating that you can now trade without signing each transaction.
 </Steps>
 
-## 开仓
+## Open a Position
 
-准备好开始交易了？以下是如何开仓的步骤：
+Ready to start trading? Here are the steps to open a position:
 
 <Steps>
-### 选择市场
+### Choose a Market
 
-浏览Triplex支持的市场列表，并选择您想要交易的资产。您可以看到每个资产的当前价格、24小时变化和其他关键信息。
+Browse the list of markets supported by Triplex and select the asset you want to trade. You can see the current price, 24-hour change, and other key information for each asset.
 
-### 配置您的头寸
+### Configure Your Position
 
-1. 选择多头（看涨）或空头（看跌）头寸
-2. 输入您的头寸规模（以USDC或代币数量为单位）
-3. 设置您希望使用的杠杆（最高25倍，具体取决于市场）
-4. 查看您的初始保证金要求、清算价格和潜在利润/亏损
+1. Choose a long (bullish) or short (bearish) position
+2. Enter your position size (in USDC or token amount)
+3. Set the leverage you wish to use (up to 25x, depending on the market)
+4. Review your initial margin requirement, liquidation price, and potential profit/loss
 
 <Callout type="info">
-更高的杠杆会放大收益和损失，同时增加清算风险。初学者应该从较低的杠杆倍数开始，逐渐提高对杠杆交易的熟悉度。
+Higher leverage amplifies gains and losses while increasing liquidation risk. Beginners should start with lower leverage and gradually become familiar with leveraged trading.
 </Callout>
 
-### 确认并提交订单
+### Confirm and Submit Order
 
-1. 查看交易摘要，包括入场价格、杠杆和滑点
-2. 如有需要，设置高级选项（如限价或多步订单）
-3. 点击"确认"并签署交易（如果未启用一键交易）或直接提交（如果已启用一键交易）
-4. 等待交易确认
+1. Review the trade summary, including entry price, leverage, and slippage
+2. Set advanced options if needed (such as limit or multi-step orders)
+3. Click "Confirm" and sign the transaction (if one-click trading is not enabled) or submit directly (if one-click trading is enabled)
+4. Wait for the trade to be confirmed
 
-### 验证您的开仓头寸
+### Verify Your Open Position
 
-交易完成后，您的新头寸将出现在"头寸"标签中。您可以在这里查看详细信息，如入场价格、当前市场价格、未实现盈亏(UPNL)和账户健康度。
+Once the trade is complete, your new position will appear under the "Positions" tab. Here you can view details such as entry price, current market price, unrealized profit/loss (UPNL), and account health.
 </Steps>
 
-## 平仓
+## Close a Position
 
-当您准备好结束交易时，以下是如何平仓的步骤：
+When you're ready to end a trade, here are the steps to close a position:
 
 <Steps>
-### 导航至您的头寸
+### Navigate to Your Position
 
-在"头寸"标签中找到您想要关闭的头寸，并点击"平仓"按钮。
+Find the position you want to close under the "Positions" tab and click the "Close" button.
 
-### 配置平仓选项
+### Configure Close Options
 
-1. 选择您想要平仓的金额（全部或部分）
-2. 查看估计的退出价格和实现损益(PNL)
-3. 配置任何高级选项，如限价
+1. Choose the amount you want to close (all or partial)
+2. Review the estimated exit price and realized profit/loss (PNL)
+3. Configure any advanced options, such as limit price
 
-### 确认并执行平仓
+### Confirm and Execute Close
 
-点击"确认"并提交平仓订单。如果启用了一键交易，这将立即执行；否则，您需要签署交易。
+Click "Confirm" and submit the close order. If one-click trading is enabled, this will execute immediately; otherwise, you need to sign the transaction.
 
 <Callout type="info">
-您也可以使用条件订单（如止损、限价或追踪止损）在达到特定价格水平时自动平仓。要了解更多信息，请参阅我们的[条件订单](./conditional-orders)指南。
+You can also use conditional orders (such as stop-loss, limit, or trailing stop) to automatically close positions when specific price levels are reached. For more information, refer to our [Conditional Orders](./conditional-orders) guide.
 </Callout>
 
-### 验证平仓结果
+### Verify Close Result
 
-平仓后，您的已实现盈亏将应用于您的账户余额，头寸将从活跃头寸列表中消失或减少（如果是部分平仓）。
+After closing, your realized profit/loss will be applied to your account balance, and the position will disappear from the active positions list or reduce (if partially closed).
 </Steps>
 
-## 提取抵押品
+## Withdraw Collateral
 
-当您准备将资金从Triplex取回您的钱包时，请按照以下步骤操作：
+When you're ready to withdraw funds back to your wallet from Triplex, follow these steps:
 
 <Steps>
-### 导航至提款部分
+### Navigate to the Withdrawal Section
 
-在账户仪表板中，找到"提款"选项卡。
+Find the "Withdrawal" tab in the account dashboard.
 
-### 配置提款
+### Configure Withdrawal
 
-1. 选择您想要提取的资产类型
-2. 输入提款金额
-3. 确认提款地址（通常是您的连接钱包）
-4. 查看提款摘要，包括任何适用的费用
+1. Select the type of asset you want to withdraw
+2. Enter the withdrawal amount
+3. Confirm the withdrawal address (usually your connected wallet)
+4. Review the withdrawal summary, including any applicable fees
 
 <Callout type="warning">
-您只能提取未用于支持开放头寸的可用余额。如果大部分资金正在使用中，您可能需要先平仓，然后再提取。
+You can only withdraw the available balance not used to support open positions. If most of your funds are in use, you may need to close positions before withdrawing.
 </Callout>
 
-### 确认并执行提款
+### Confirm and Execute Withdrawal
 
-点击"确认"并签署提款交易。这将需要支付Gas费用。
+Click "Confirm" and sign the withdrawal transaction. This will require a gas fee.
 
-### 验证资金
+### Verify Funds
 
-提款确认后，资金应该在几分钟内显示在您的钱包中。您可以在区块浏览器上检查交易状态。
+Once the withdrawal is confirmed, the funds should appear in your wallet within a few minutes. You can check the transaction status on the blockchain explorer.
 </Steps>
 
-## 交易技巧和最佳实践
+## Trading Tips and Best Practices
 
-- **从小额开始**：如果您是新手，建议从小额交易和低杠杆开始。
-- **使用条件订单**：设置止损单以限制潜在损失，特别是在使用高杠杆时。
-- **监控账户健康度**：定期检查您的账户健康度，确保它保持在安全水平之上，远离清算点。
-- **关注资金费率**：在高波动期间，资金费率可能会迅速变化。定期检查它们，因为它们会影响长期持有头寸的盈利能力。
-- **多样化您的抵押品**：考虑使用多种抵押品类型来优化您的资本效率和风险敞口。
+- **Start Small**：If you're new, it's recommended to start with small trades and low leverage.
+- **Use Conditional Orders**：Set stop-loss orders to limit potential losses, especially when using high leverage.
+- **Monitor Account Health**：Regularly check your account health to ensure it stays above safe levels, away from liquidation points.
+- **Watch Funding Rates**：During high volatility, funding rates can change rapidly. Regularly check them because they affect the profitability of long-term position holding.
+- **Diversify Your Collateral**：Consider using multiple collateral types to optimize your capital efficiency and risk exposure.
 
-通过完成本教程，您现在应该能够在Triplex Exchange上创建账户、存入资金、执行交易并管理您的头寸。随着您交易经验的增长，您可以探索更高级的功能，如委托交易、条件订单和多抵押品策略。 
+By completing this tutorial, you should now be able to create an account on Triplex Exchange, deposit funds, execute trades, and manage your positions. As your trading experience grows, you can explore more advanced features like delegate trading, conditional orders, and multi-collateral strategies. 

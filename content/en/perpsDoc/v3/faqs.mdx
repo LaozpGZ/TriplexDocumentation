@@ -1,391 +1,391 @@
-# 常见问题解答 (FAQs)
+# Frequently Asked Questions (FAQs)
 
-本页面收集了关于Triplex永续合约交易的常见问题。如果您有其他问题，请联系我们的社区支持团队。
+This page collects common questions about Triplex perpetual contract trading. If you have other questions, please contact our community support team.
 
 import { Callout } from 'nextra/components'
 import { Tabs } from 'nextra/components'
 
 <Callout type="info">
-本FAQ将随着平台的发展不断更新。请定期查看最新信息。
+This FAQ will be continuously updated as the platform evolves. Please check back regularly for the latest information.
 </Callout>
 
-## 基础问题
+## Basic Questions
 
-<Tabs items={['账户相关', '交易相关', '费用相关']}>
+<Tabs items={['Account Related', 'Trading Related', 'Fee Related']}>
   <Tabs.Tab>
-  ### 如何开始使用Triplex？
+  ### How to start using Triplex?
 
-  要开始使用Triplex，请按照以下步骤操作：
+  To start using Triplex, follow these steps:
 
-  1. 访问Triplex交易平台
-  2. 连接您的兼容Web3钱包（如MetaMask）
-  3. 存入抵押品（USDC、ETH、tBTC等）
-  4. 开始交易永续合约
+  1. Visit the Triplex trading platform
+  2. Connect your compatible Web3 wallet (such as MetaMask)
+  3. Deposit collateral (USDC, ETH, tBTC, etc.)
+  4. Start trading perpetual contracts
 
-  ### 什么是NFT账户？
+  ### What is an NFT account?
 
-  在Triplex V3中，每个交易账户都是一个NFT（非同质化代币）。这种设计带来以下优势：
+  In Triplex V3, each trading account is an NFT (Non-Fungible Token). This design offers the following advantages:
 
-  - 账户可以转移所有权
-  - 可以授权其他地址操作您的账户
-  - 更好的隐私和安全性
-  - 支持跨多个钱包的账户管理
+  - Accounts can transfer ownership
+  - You can authorize other addresses to operate your account
+  - Better privacy and security
+  - Support for account management across multiple wallets
 
-  ### 我可以创建多个交易账户吗？
+  ### Can I create multiple trading accounts?
 
-  是的，您可以创建多个交易账户。每个账户都是独立的NFT，可以有不同的抵押品组合和交易策略。
+  Yes, you can create multiple trading accounts. Each account is an independent NFT and can have different collateral combinations and trading strategies.
 
-  ### 我可以从一个账户转移资产到另一个账户吗？
+  ### Can I transfer assets from one account to another?
 
-  可以，只要两个账户都归您所有或您有权限操作。转移过程需要：
+  Yes, as long as both accounts are owned by you or you have permission to operate them. The transfer process requires:
 
-  1. 从源账户提取资产
-  2. 将资产存入目标账户
+  1. Withdraw assets from the source account
+  2. Deposit assets into the target account
 
   <Callout type="warning">
-  请确保源账户在提取后仍有足够的保证金维持现有头寸，否则可能触发清算。
+  Please ensure the source account still has enough margin to maintain existing positions after withdrawal, or it may trigger liquidation.
   </Callout>
   </Tabs.Tab>
 
   <Tabs.Tab>
-  ### Triplex支持哪些交易对？
+  ### What trading pairs does Triplex support?
 
-  Triplex支持多种加密货币永续合约交易对，包括但不限于：
+  Triplex supports a variety of cryptocurrency perpetual contract trading pairs, including but not limited to:
 
   - BTC/USD
   - ETH/USD
   - LINK/USD
   - SOL/USD
-  - 等多种主流及新兴代币
+  - And many other mainstream and emerging tokens
 
-  交易对列表会不断扩展，请查看平台最新信息。
+  The list of trading pairs will continue to expand, please check the platform for the latest information.
 
-  ### 什么是一键交易？
+  ### What is one-click trading?
 
-  一键交易是Triplex的特色功能，允许用户无需支付gas费执行交易。通过签署离链消息，交易在后台处理，大大提高了交易效率和用户体验。
+  One-click trading is a feature of Triplex that allows users to execute trades without paying gas fees. By signing off-chain messages, trades are processed in the background, greatly improving trading efficiency and user experience.
 
-  ### 最大杠杆倍数是多少？
+  ### What is the maximum leverage?
 
-  Triplex提供的最大杠杆倍数取决于多个因素：
+  The maximum leverage provided by Triplex depends on several factors:
 
-  - 交易对的波动性
-  - 您使用的抵押品类型
-  - 市场流动性条件
-  - 账户的整体风险状况
+  - Volatility of the trading pair
+  - Type of collateral you are using
+  - Market liquidity conditions
+  - Overall risk status of the account
 
-  一般而言，主流币种可以使用高达20-50倍的杠杆，具体取决于市场条件。
+  Generally, mainstream currencies can use leverage up to 20-50 times, depending on market conditions.
 
-  ### 如何设置止损或止盈订单？
+  ### How to set stop-loss or take-profit orders?
 
-  Triplex支持多种订单类型，包括止损和止盈：
+  Triplex supports various order types, including stop-loss and take-profit:
 
-  1. 在下单界面选择"高级订单"
-  2. 选择"止损"或"止盈"订单类型
-  3. 设置触发价格和执行价格
-  4. 确认并提交订单
+  1. Select "Advanced Order" in the order interface
+  2. Choose "Stop-Loss" or "Take-Profit" order type
+  3. Set the trigger price and execution price
+  4. Confirm and submit the order
   </Tabs.Tab>
 
   <Tabs.Tab>
-  ### Triplex收取哪些费用？
+  ### What fees does Triplex charge?
 
-  Triplex收取以下几类费用：
+  Triplex charges the following types of fees:
 
-  1. **交易费用**：开仓和平仓时收取，通常为名义价值的0.05%-0.1%
-  2. **资金费率**：每8小时结算一次，根据市场情况变动
-  3. **清算费用**：仅在账户被清算时收取，通常为头寸价值的一定比例
+  1. **Trading Fees**: Charged when opening and closing positions, usually 0.05%-0.1% of the nominal value
+  2. **Funding Rate**: Settled every 8 hours, varies based on market conditions
+  3. **Liquidation Fees**: Charged only when an account is liquidated, usually a certain percentage of the position value
 
-  ### 资金费率如何计算？
+  ### How is the funding rate calculated?
 
-  资金费率基于市场溢价/折价计算：
+  The funding rate is calculated based on market premium/discount:
 
-  - **正资金费率**：多头支付给空头
-  - **负资金费率**：空头支付给多头
+  - **Positive Funding Rate**: Longs pay shorts
+  - **Negative Funding Rate**: Shorts pay longs
 
-  资金费率每8小时结算一次，计算公式为：
+  The funding rate is settled every 8 hours, and the calculation formula is:
 
   ```
-  资金费率 = 基准费率 + 溢价指数 * 倍数
+  Funding Rate = Base Rate + Premium Index * Multiplier
   ```
 
-  基准费率和倍数根据市场条件动态调整。
+  The base rate and multiplier are dynamically adjusted based on market conditions.
 
-  ### 有交易费折扣吗？
+  ### Are there any trading fee discounts?
 
-  是的，Triplex提供多层交易费折扣：
+  Yes, Triplex offers multi-tiered trading fee discounts:
 
-  - **交易量折扣**：30天交易量越高，费率越低
-  - **质押折扣**：质押平台代币可获得额外折扣
-  - **推荐计划**：邀请新用户可获得额外返佣
+  - **Volume Discount**: The higher the 30-day trading volume, the lower the rate
+  - **Staking Discount**: Staking platform tokens can earn additional discounts
+  - **Referral Program**: Inviting new users can earn additional rebates
 
-  具体折扣比例请参考平台费率页面。
+  Please refer to the platform's fee page for specific discount rates.
 
-  ### 提取资金需要支付费用吗？
+  ### Are there fees for withdrawing funds?
 
-  从Triplex提取资金涉及的费用：
+  Fees involved in withdrawing funds from Triplex:
 
-  - **智能合约gas费**：取决于以太坊网络拥堵情况
-  - **无平台提款费**：Triplex不额外收取提款费用
+  - **Smart Contract Gas Fee**: Depends on Ethereum network congestion
+  - **No Platform Withdrawal Fee**: Triplex does not charge additional withdrawal fees
 
-  小额提款可能导致gas费用占比较高，建议适度合并提款操作。
+  Small withdrawals may result in a higher proportion of gas fees, it is recommended to consolidate withdrawal operations appropriately.
   </Tabs.Tab>
 </Tabs>
 
-## 保证金和抵押品
+## Margin and Collateral
 
-### 什么是交叉保证金？
+### What is cross-margin?
 
-交叉保证金是一种账户结构，您的所有抵押品共同为所有头寸提供保证金。这带来以下特点：
+Cross-margin is an account structure where all collateral is used to provide margin for all positions. This brings the following features:
 
-- **更高的资本效率**：抵押品可以同时支持多个头寸
-- **自动风险对冲**：不同方向的头寸可以互相抵消风险
-- **集中管理**：无需管理多个独立保证金账户
+- **Higher capital efficiency**: Collateral can be used to support multiple positions simultaneously
+- **Automatic risk hedging**: Positions in different directions can offset each other's risk
+- **Centralized management**: No need to manage multiple separate margin accounts
 
-与隔离保证金相比，交叉保证金可以更高效地利用资金，但也意味着所有头寸共享风险。
+Compared to isolated margin, cross-margin can more efficiently utilize funds, but it also means that all positions share risk.
 
-### Triplex支持哪些抵押品?
+### What collateral does Triplex support?
 
-Triplex V3支持多种抵押品类型：
+Triplex V3 supports various types of collateral:
 
-- **USDC**：主要稳定币抵押品
-- **USDe**：Ethena稳定币
-- **ETH/wETH**：以太坊和包装以太坊
-- **tBTC**：由Threshold Network支持的比特币代币
-- **stataUSDC**：Aave质押USDC
+- **USDC**: Main stablecoin collateral
+- **USDe**: Ethena stablecoin
+- **ETH/wETH**: Ethereum and wrapped Ethereum
+- **tBTC**: Bitcoin tokens supported by Threshold Network
+- **stataUSDC**: Aave-staked USDC
 
-不同抵押品可能有不同的保证金系数和风险参数。
+Different collateral may have different margin coefficients and risk parameters.
 
-### 如何添加或提取抵押品？
+### How to add or withdraw collateral?
 
-在Triplex添加或提取抵押品的步骤：
+Steps to add or withdraw collateral in Triplex:
 
-1. 在平台导航菜单中点击"钱包"或"抵押品"
-2. 选择"存款"或"提款"操作
-3. 选择抵押品类型和金额
-4. 确认交易并等待区块确认
+1. Click on "Wallet" or "Collateral" in the platform navigation menu
+2. Choose "Deposit" or "Withdraw" operation
+3. Select collateral type and amount
+4. Confirm transaction and wait for block confirmation
 
 <Callout type="warning">
-提取抵押品前，请确保您的账户有足够的剩余保证金维持现有头寸。系统会阻止可能导致清算的提款。
+Before withdrawing collateral, please ensure your account has enough remaining margin to maintain existing positions. The system will prevent withdrawals that may trigger liquidation.
 </Callout>
 
-### 不同抵押品之间有什么区别？
+### What is the difference between different collateral types?
 
-不同抵押品在Triplex系统中的主要区别：
+The main differences between collateral types in the Triplex system:
 
-| 抵押品 | 波动性 | 保证金效率 | 特点 |
+| Collateral | Volatility | Margin Efficiency | Features |
 |-------|-------|-----------|------|
-| USDC | 极低 | 最高 | 基准稳定币，保证金效率最高 |
-| USDe | 极低 | 高 | 与USDC类似，但机制略有不同 |
-| ETH/wETH | 中高 | 中 | 提供价格上涨保护，但有波动风险 |
-| tBTC | 高 | 中低 | 比特币敞口，波动性较高 |
-| stataUSDC | 低 | 高 | 提供额外收益，略有流动性限制 |
+| USDC | Extremely low | Highest | Baseline stablecoin, highest margin efficiency |
+| USDe | Extremely low | High | Similar to USDC but with a slightly different mechanism |
+| ETH/wETH | Medium-high | Medium | Provides price protection against price increases but has volatility risk |
+| tBTC | High | Medium-low | Bitcoin exposure, higher volatility |
+| stataUSDC | Low | High | Provides additional yield but has some liquidity restrictions |
 
-## 交易和风险管理
+## Trading and Risk Management
 
-### 什么是账户健康度？
+### What is account health?
 
-账户健康度是衡量账户抵押品状况的关键指标，计算公式为：
+Account health is a key indicator of collateral status in an account, calculated as:
 
 ```
-账户健康度 = (账户权益 / 维持保证金要求) × 100%
+Account Health = (Account Equity / Maintenance Margin Requirement) × 100%
 ```
 
-- **健康度 > 100%**：账户安全，不会被清算
-- **健康度 = 100%**：账户处于临界状态，任何不利价格变动都可能触发清算
-- **健康度 < 100%**：账户将被清算
+- **Health > 100%**：Account is safe, will not be liquidated
+- **Health = 100%**：Account is at the critical state, any adverse price movement may trigger liquidation
+- **Health < 100%**：Account will be liquidated
 
 <Callout type="error">
-建议将账户健康度维持在150%以上，特别是在使用波动性抵押品或市场波动较大时。
+It is recommended to maintain account health above 150% especially when using volatile collateral or when market volatility is high.
 </Callout>
 
-### 如何避免清算？
+### How to avoid liquidation?
 
-避免清算的最佳实践：
+Best practices to avoid liquidation:
 
-1. **监控账户健康度**：定期检查，特别是在市场波动期间
-2. **设置预警**：使用Triplex的通知功能设置健康度警报
-3. **适度杠杆**：根据您的风险承受能力选择合适的杠杆
-4. **添加抵押品**：当健康度下降时及时增加抵押品
-5. **部分平仓**：减少头寸规模以降低保证金要求
-6. **对冲头寸**：在相反方向开立小额头寸以对冲风险
+1. **Monitor account health**：Regularly check, especially during market volatility
+2. **Set alerts**：Use Triplex's notification feature to set health alert
+3. **Moderate leverage**：Choose appropriate leverage based on your risk tolerance
+4. **Add collateral**：Increase collateral when health drops
+5. **Partial liquidation**：Reduce position size to lower margin requirement
+6. **Hedge positions**：Open small position in opposite direction to hedge risk
 
-### 清算后还能继续交易吗？
+### Can I continue trading after liquidation?
 
-是的，清算后您仍然可以继续交易，只要账户中还有抵押品：
+Yes, after liquidation, you can continue trading as long as there is collateral in your account:
 
-- **部分清算**：只清算足够恢复健康度的头寸部分，剩余头寸和抵押品仍然可用
-- **全部清算**：所有头寸被关闭，但剩余抵押品仍然在账户中可供新交易使用
-- **添加抵押品**：清算后可以随时添加新抵押品重新开始交易
+- **Partial liquidation**：Only liquidate enough positions to restore health, remaining positions and collateral still available
+- **Full liquidation**：All positions are closed, but remaining collateral still available in account for new transactions
+- **Add collateral**：Can add new collateral at any time to start trading again
 
-### 什么是资金费率，如何影响我的交易？
+### What is funding rate, and how does it affect my trading?
 
-资金费率是永续合约独有的机制，用于使合约价格与现货价格保持一致：
+Funding rate is a unique mechanism of perpetual contracts used to keep the contract price consistent with the spot price:
 
-- **计算周期**：通常每8小时结算一次
-- **费率方向**：当合约溢价时，多头支付给空头；当合约折价时，空头支付给多头
-- **交易策略影响**：高资金费率可能显著影响长期持仓的盈利能力
+- **Calculation cycle**：Usually settled every 8 hours
+- **Rate direction**：When contract premium, longs pay shorts; when contract discount, shorts pay longs
+- **Trading strategy impact**：High funding rate may significantly affect long-term position profitability
 
-<Tabs items={['多头策略', '空头策略', '套利策略']}>
+<Tabs items={['Long Strategy', 'Short Strategy', 'Arbitrage Strategy']}>
   <Tabs.Tab>
-  对于多头交易者：
+   For long traders:
 
-  - **正资金费率**：需要支付费用，降低持仓收益
-  - **负资金费率**：收取费用，增加持仓收益
+  - **Positive funding rate**：Need to pay fees, reduce position yield
+  - **Negative funding rate**：Receive fees, increase position yield
   
-  在高正资金费率环境下，多头可以考虑：
+  In a high positive funding rate environment, longs can consider:
   
-  1. 转向短期交易而非长期持仓
-  2. 等待资金费率回归合理区间再开仓
-  3. 使用限价单以获得更好的开仓价格，抵消部分费率成本
+  1. Shift to short-term trading instead of long-term holding
+  2. Wait for funding rate to return to reasonable range before opening position
+  3. Use limit order to get better opening price, offset part of fee cost
   </Tabs.Tab>
 
   <Tabs.Tab>
-  对于空头交易者：
+   For short traders:
 
-  - **正资金费率**：收取费用，增加持仓收益
-  - **负资金费率**：需要支付费用，降低持仓收益
+  - **Positive funding rate**：Receive fees, increase position yield
+  - **Negative funding rate**：Need to pay fees, reduce position yield
   
-  在高负资金费率环境下，空头可以考虑：
+  In a high negative funding rate environment, shorts can consider:
   
-  1. 转向短期交易策略
-  2. 等待资金费率回归合理区间
-  3. 计算费率成本是否超过预期价格下跌收益
+  1. Shift to short-term trading strategy
+  2. Wait for funding rate to return to reasonable range
+  3. Calculate whether fee cost exceeds expected price decline yield
   </Tabs.Tab>
 
   <Tabs.Tab>
-  资金费率套利策略：
+   Funding rate arbitrage strategy:
 
-  当资金费率极端（高正或高负）时，可以考虑以下套利策略：
+   When funding rate is extreme (high positive or high negative), the following arbitrage strategy can be considered:
   
-  1. **现货-永续套利**：
-     - 高正费率时：做空永续 + 买入现货
-     - 高负费率时：做多永续 + 做空现货
+  1. **Spot-Perpetual Arbitrage**:
+     - High positive rate: Short perpetual + Buy spot
+     - High negative rate: Long perpetual + Short spot
   
-  2. **交易所间套利**：
-     - 利用不同交易所之间的资金费率差异
-     - 在低费率平台做多，高费率平台做空
+  2. **Exchange Arbitrage**:
+     - Utilize funding rate differences between different exchanges
+     - Long in low-rate platform, short in high-rate platform
   
-  请注意，套利策略需要考虑交易费用、价差和执行风险。
+  Please note that arbitrage strategy needs to consider transaction fees, spread, and execution risk.
   </Tabs.Tab>
 </Tabs>
 
-## 技术问题
+## Technical Questions
 
-### Triplex交易基于哪个区块链？
+### What blockchain does Triplex trading run on?
 
-Triplex主要在以太坊及其第二层扩展解决方案上运行：
+Triplex mainly runs on Ethereum and its second layer expansion solutions:
 
-- **以太坊主网**：用于核心协议和治理
-- **Optimism**：主要交易环境，提供低成本高速交易
-- **Base**：支持部分交易对，提供额外可选环境
+- **Ethereum Mainnet**: Used for core protocol and governance
+- **Optimism**: Main trading environment, providing low-cost high-speed trading
+- **Base**: Supports partial trading pairs, providing additional optional environment
 
-用户可以根据个人偏好和特定交易对的可用性选择合适的网络。
+Users can choose the appropriate network based on personal preference and specific trading pair availability.
 
-### 如何解决订单执行失败？
+### How to handle order execution failure?
 
-订单执行失败的常见原因及解决方法：
+Common reasons for order execution failure and solutions:
 
-1. **滑点过大**：
-   - 调整滑点容忍度
-   - 使用限价单而非市价单
+1. **Large slippage**：
+   - Adjust slippage tolerance
+   - Use limit order instead of market order
 
-2. **保证金不足**：
-   - 添加更多抵押品
-   - 减小订单规模
-   - 降低使用的杠杆
+2. **Insufficient margin**：
+   - Add more collateral
+   - Reduce order size
+   - Reduce used leverage
 
-3. **网络拥堵**：
-   - 等待网络恢复正常
-   - 考虑使用一键交易功能
+3. **Network congestion**：
+   - Wait for network to return to normal
+   - Consider using one-click trading feature
 
-4. **价格剧烈波动**：
-   - 等待市场稳定
-   - 将大订单拆分为多个小订单
+4. **Price extreme volatility**：
+   - Wait for market to stabilize
+   - Split large order into multiple small orders
 
-### 一键交易的工作原理是什么？
+### How does one-click trading work?
 
-一键交易通过以下步骤工作：
+One-click trading works through the following steps:
 
-1. 用户使用私钥签署离链交易消息
-2. 签名消息发送到Triplex后端服务器
-3. Triplex将多个用户订单批量处理并提交到链上
-4. 交易确认后，用户账户状态更新
+1. User uses private key to sign off-chain trading message
+2. Signed message sent to Triplex backend server
+3. Triplex batch processes multiple user orders and submits to chain
+4. After transaction confirmation, user account status updated
 
-这种机制显著降低了交易成本，减少了确认时间，提高了整体用户体验。
+This mechanism significantly reduces transaction costs and reduces confirmation time, improving overall user experience.
 
-### 如何授权其他地址操作我的账户？
+### How to authorize other addresses to operate my account?
 
-授权其他地址操作您的账户（委托交易）的步骤：
+Steps to authorize other addresses to operate your account (delegate trading):
 
-1. 导航至账户设置
-2. 选择"委托管理"或"账户权限"
-3. 输入被授权地址
-4. 设置权限级别（仅交易、仅存款、全部权限等）
-5. 确认授权
+1. Navigate to account settings
+2. Choose "Delegate Management" or "Account Permissions"
+3. Input authorized address
+4. Set permission level (Only trading, Only deposit, All permissions, etc.)
+5. Confirm authorization
 
-您可以随时查看和撤销已授权的地址。这对于团队管理账户、使用交易机器人或紧急情况下的备用访问非常有用。
+You can view and revoke authorized addresses at any time. This is useful for team managing accounts, using trading robots, or backup access in case of emergency.
 
-## 其他问题
+## Other Questions
 
-### Triplex与其他永续合约平台有何不同？
+### What is the difference between Triplex and other perpetual contract platforms?
 
-Triplex与其他平台的主要区别：
+The main differences between Triplex and other platforms:
 
-1. **多抵押品支持**：支持多种资产作为抵押品，提高资本效率
-2. **NFT账户系统**：账户作为NFT管理，提供更好的可转移性和安全性
-3. **一键交易**：无需支付gas费的高效交易体验
-4. **跨链互操作性**：支持多链交易，提供更多可能性
-5. **订单失败替换**：智能处理失败订单，提高交易成功率
-6. **优化的清算机制**：更公平高效的清算过程
+1. **Multi-collateral support**：Support various assets as collateral, improve capital efficiency
+2. **NFT account system**：Accounts managed as NFTs, providing better transferability and security
+3. **One-click trading**：High-efficiency trading experience without paying gas fees
+4. **Cross-chain interoperability**：Support multi-chain trading, providing more possibilities
+5. **Order failure replacement**：Smartly handle failed orders, improve trading success rate
+6. **Optimized liquidation mechanism**：More fair and efficient liquidation process
 
-### 如何参与Triplex社区和治理？
+### How to participate in Triplex community and governance?
 
-参与Triplex社区和治理的方式：
+Ways to participate in Triplex community and governance:
 
-1. **社交媒体**：
-   - 关注官方Twitter、Discord和Telegram
-   - 参与社区讨论和活动
+1. **Social Media**:
+   - Follow official Twitter, Discord, and Telegram
+   - Participate in community discussions and activities
 
-2. **治理参与**：
-   - 持有和质押平台治理代币
-   - 参与提案投票
-   - 提交改进建议
+2. **Governance Participation**:
+   - Hold and stake platform governance tokens
+   - Participate in proposal voting
+   - Submit improvement suggestions
 
-3. **贡献者计划**：
-   - 参与测试网活动
-   - 提交错误报告
-   - 贡献代码或文档
+3. **Contributor Program**:
+   - Participate in testnet activities
+   - Submit error reports
+   - Contribute code or documentation
 
-### 在使用Triplex时如何确保安全？
+### How to ensure security when using Triplex?
 
-使用Triplex的安全最佳实践：
+Best practices for security when using Triplex:
 
-1. **钱包安全**：
-   - 使用硬件钱包存储大额资金
-   - 启用所有可用的安全功能（2FA等）
-   - 不要分享私钥或助记词
+1. **Wallet Security**:
+   - Use hardware wallet to store large amounts of funds
+   - Enable all available security features (2FA, etc.)
+   - Do not share private key or mnemonic
 
-2. **交易安全**：
-   - 从小额开始熟悉平台
-   - 设置止损限制风险
-   - 验证所有交易详情
+2. **Trading Security**:
+   - Start with small amounts to familiarize with platform
+   - Set stop-loss to limit risk
+   - Verify all transaction details
 
-3. **账户安全**：
-   - 定期检查授权地址
-   - 使用不同的钱包分离大额资金
-   - 监控账户活动
+3. **Account Security**:
+   - Regularly check authorized addresses
+   - Use different wallets to separate large amounts of funds
+   - Monitor account activity
 
 <Callout>
-如果您遇到任何安全问题或怀疑账户被入侵，请立即联系Triplex支持团队。
+If you encounter any security issues or suspect account compromise, please contact Triplex support team immediately.
 </Callout>
 
-### 在哪里可以获取更多帮助？
+### Where can I get more help?
 
-如需更多帮助，请使用以下资源：
+For more help, please use the following resources:
 
-1. **官方文档**：详细的平台指南和教程
-2. **社区支持**：Discord和Telegram官方频道
-3. **帮助中心**：常见问题和疑难解答
-4. **视频教程**：官方YouTube频道的教学视频
-5. **直接支持**：通过平台内的帮助功能提交支持票
+1. **Official Documentation**: Detailed platform guide and tutorial
+2. **Community Support**: Official Discord and Telegram channels
+3. **Help Center**: Common questions and troubleshooting
+4. **Video Tutorial**: Teaching videos on official YouTube channel
+5. **Direct Support**: Submit support ticket through platform's help feature
 
-Triplex团队致力于提供全面的支持，确保所有用户都能顺利使用平台。 
+Triplex team is committed to providing comprehensive support to ensure all users can smoothly use the platform. 

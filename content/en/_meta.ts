@@ -1,6 +1,6 @@
 export default {
   index: {
-    title: 'Welcome',
+    type: 'page',
     display: 'hidden',
     theme: {
       typesetting: 'article',

@@ -1,26 +1,26 @@
-# API 参考文档
+# API Reference Documentation
 
 ## REST API
 
-基础URL: `https://api.triplex.io`
+Base URL: `https://api.triplex.io`
 
-### 认证
+### Authentication
 
-所有API请求需要在header中包含API密钥：
+All API requests require an API key in the header:
 
 ```bash
 Authorization: Bearer YOUR_API_KEY
 ```
 
-### 市场数据
+### Market Data
 
-#### 获取所有市场
+#### Get All Markets
 
 ```http
 GET /v1/markets
 ```
 
-响应:
+Response:
 ```json
 {
     "markets": [
@@ -36,21 +36,21 @@ GET /v1/markets
 }
 ```
 
-#### 获取单个市场
+#### Get Single Market
 
 ```http
 GET /v1/markets/{symbol}
 ```
 
-### 交易接口
+### Trading Interface
 
-#### 创建订单
+#### Create Order
 
 ```http
 POST /v1/orders
 ```
 
-请求体:
+Request body:
 ```json
 {
     "symbol": "ETH-USD",
@@ -62,21 +62,21 @@ POST /v1/orders
 }
 ```
 
-#### 查询订单
+#### Query Order
 
 ```http
 GET /v1/orders/{order_id}
 ```
 
-### 账户接口
+### Account Interface
 
-#### 获取账户信息
+#### Get Account Information
 
 ```http
 GET /v1/account
 ```
 
-#### 获取持仓
+#### Get Positions
 
 ```http
 GET /v1/positions
@@ -84,9 +84,9 @@ GET /v1/positions
 
 ## WebSocket API
 
-WebSocket 端点: `wss://ws.triplex.io`
+WebSocket endpoint: `wss://ws.triplex.io`
 
-### 订阅格式
+### Subscription Format
 
 ```json
 {
@@ -96,24 +96,24 @@ WebSocket 端点: `wss://ws.triplex.io`
 }
 ```
 
-### 市场数据订阅
+### Market Data Subscription
 
 ```javascript
-// 订阅行情
+// Subscribe to market data
 ws.send(JSON.stringify({
     op: 'subscribe',
     channel: 'market',
     symbols: ['ETH-USD']
 }));
 
-// 接收数据
+// Receive data
 ws.onmessage = (event) => {
     const data = JSON.parse(event.data);
     console.log('Market update:', data);
 };
 ```
 
-### 订单更新订阅
+### Order Update Subscription
 
 ```javascript
 ws.send(JSON.stringify({
@@ -123,23 +123,23 @@ ws.send(JSON.stringify({
 }));
 ```
 
-## 错误代码
+## Error Codes
 
-| 代码 | 描述 |
-|------|------|
-| 1001 | 无效的API密钥 |
-| 1002 | 请求频率超限 |
-| 2001 | 订单创建失败 |
-| 2002 | 保证金不足 |
-| 3001 | 市场暂停交易 |
+| Code | Description |
+|------|-------------|
+| 1001 | Invalid API key |
+| 1002 | Request rate limit exceeded |
+| 2001 | Order creation failed |
+| 2002 | Insufficient margin |
+| 3001 | Market trading suspended |
 
-## 速率限制
+## Rate Limits
 
-- 公共接口: 10次/秒
-- 私有接口: 100次/分钟
-- WebSocket连接: 5个/IP
+- Public endpoints: 10 requests/second
+- Private endpoints: 100 requests/minute
+- WebSocket connections: 5 per IP
 
-## SDK 示例
+## SDK Examples
 
 ```typescript
 import { TriplexAPI } from '@triplex/api';
@@ -149,10 +149,10 @@ const api = new TriplexAPI({
     secret: 'YOUR_SECRET'
 });
 
-// 获取市场数据
+// Get market data
 const markets = await api.getMarkets();
 
-// 创建订单
+// Create order
 const order = await api.createOrder({
     symbol: 'ETH-USD',
     side: 'buy',
@@ -161,7 +161,7 @@ const order = await api.createOrder({
     size: '1.0'
 });
 
-// WebSocket订阅
+// WebSocket subscription
 const ws = api.createWebSocket();
 ws.subscribe('market', ['ETH-USD']);
 ws.onMarketUpdate((data) => {

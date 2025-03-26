@@ -4,7 +4,8 @@ import nextra from 'nextra'
 const withNextra = nextra({
   defaultShowCopyCode: true,
   latex: true,
-  contentDirBasePath: '/'
+  contentDirBasePath: '/',
+  staticImage: true
 })
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -19,6 +20,7 @@ const nextConfig = withBundleAnalyzer(
       // your project has ESLint errors.
       ignoreDuringBuilds: true
     },
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
     i18n: {
       locales: ['en', 'zh-SG'],
       defaultLocale: 'en'
@@ -28,6 +30,32 @@ const nextConfig = withBundleAnalyzer(
         source: '/docs',
         destination: '/docs/getting-started',
         statusCode: 302
+      }
+    ],
+    rewrites: async () => [
+      {
+        source: '/en/android-chrome-192x192.png',
+        destination: '/android-chrome-192x192.png'
+      },
+      {
+        source: '/en/android-chrome-512x512.png',
+        destination: '/android-chrome-512x512.png'
+      },
+      {
+        source: '/zh-SG/android-chrome-192x192.png',
+        destination: '/android-chrome-192x192.png'
+      },
+      {
+        source: '/zh-SG/android-chrome-512x512.png',
+        destination: '/android-chrome-512x512.png'
+      },
+      {
+        source: '/en/favicon/:path*',
+        destination: '/favicon/:path*'
+      },
+      {
+        source: '/zh-SG/favicon/:path*',
+        destination: '/favicon/:path*'
       }
     ],
     webpack(config) {

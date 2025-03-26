@@ -1,20 +1,20 @@
-# 集成指南
+# Integration Guide
 
-## 快速开始
+## Quick Start
 
-### 环境准备
+### Environment Setup
 
 ```bash
-# 安装 SDK
+# Install SDK
 npm install @triplex/sdk
 
-# 或使用 yarn
+# Or use yarn
 yarn add @triplex/sdk
 ```
 
-## SDK 使用
+## SDK Usage
 
-### 初始化
+### Initialization
 
 ```typescript
 import { TriplexSDK } from '@triplex/sdk';
@@ -25,10 +25,10 @@ const sdk = new TriplexSDK({
 });
 ```
 
-### 合约交互
+### Contract Interaction
 
 ```typescript
-// 开仓
+// Open position
 async function openPosition() {
     const tx = await sdk.perpetual.openPosition({
         token: 'ETH',
@@ -39,7 +39,7 @@ async function openPosition() {
     await tx.wait();
 }
 
-// 平仓
+// Close position
 async function closePosition() {
     const tx = await sdk.perpetual.closePosition({
         token: 'ETH',
@@ -49,18 +49,18 @@ async function closePosition() {
 }
 ```
 
-## 智能合约集成
+## Smart Contract Integration
 
-### 合约地址
+### Contract Addresses
 
-| 网络 | 合约 | 地址 |
-|------|------|------|
+| Network | Contract | Address |
+|---------|----------|---------|
 | Mainnet | PerpetualPool | 0x... |
 | Mainnet | MarginBank | 0x... |
 | Testnet | PerpetualPool | 0x... |
 | Testnet | MarginBank | 0x... |
 
-### 核心接口
+### Core Interfaces
 
 ```solidity
 interface ITriplexPerpetual {
@@ -88,56 +88,56 @@ interface ITriplexPerpetual {
 }
 ```
 
-## 事件监听
+## Event Listening
 
 ```typescript
-// 监听开仓事件
+// Listen for position open events
 sdk.perpetual.on('PositionOpened', (event) => {
     console.log('New position opened:', event);
 });
 
-// 监听平仓事件
+// Listen for position close events
 sdk.perpetual.on('PositionClosed', (event) => {
     console.log('Position closed:', event);
 });
 ```
 
-## 错误处理
+## Error Handling
 
 ```typescript
 try {
     await openPosition();
 } catch (error) {
     if (error.code === 'INSUFFICIENT_MARGIN') {
-        console.error('保证金不足');
+        console.error('Insufficient margin');
     } else if (error.code === 'PRICE_IMPACT_TOO_HIGH') {
-        console.error('价格影响过大');
+        console.error('Price impact too high');
     } else {
-        console.error('未知错误:', error);
+        console.error('Unknown error:', error);
     }
 }
 ```
 
-## 最佳实践
+## Best Practices
 
-### 安全建议
+### Security Recommendations
 
-1. 始终验证用户输入
-2. 实现适当的错误处理
-3. 使用安全的依赖包版本
-4. 定期更新SDK和依赖
+1. Always validate user input
+2. Implement proper error handling
+3. Use secure dependency versions
+4. Regularly update SDK and dependencies
 
-### 性能优化
+### Performance Optimization
 
-1. 实现合适的缓存策略
-2. 批量处理交易
-3. 使用WebSocket而不是轮询
-4. 优化Gas使用
+1. Implement appropriate caching strategies
+2. Batch process transactions
+3. Use WebSocket instead of polling
+4. Optimize Gas usage
 
-## 示例项目
+## Example Projects
 
-完整的示例项目可以在我们的 [GitHub仓库](https://github.com/your-org/triplex-examples) 找到：
+Complete example projects can be found in our [GitHub repository](https://github.com/your-org/triplex-examples):
 
-- 基础交易界面
-- 机器人交易示例
-- 数据分析工具 
+- Basic trading interface
+- Bot trading example
+- Data analysis tools 
