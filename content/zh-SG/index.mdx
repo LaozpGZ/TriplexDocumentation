@@ -1,0 +1,66 @@
+---
+title: Triplex – 去中心化流动性提供协议
+searchable: false
+---
+
+import { Callout } from 'nextra/components'
+import { Features } from '@app/_components/features'
+
+# Triplex
+
+Triplex是在Aptos和其他兼容链上的去中心化流动性提供协议，提供模块化架构和灵活的流动性提供系统。它引入了一种创新的DeFi框架，解决了传统链上衍生品平台面临的流动性获取和基础设施扩展等挑战。
+
+通过Triplex，用户可以体验更高效的资本利用率、更灵活的风险敞口以及全新的互操作性体验。
+
+<div className="mt-16 mb-20 text-center">
+  [开始使用](/zh-SG/docs/getting-started) · [示例](/zh-SG/examples/basic) · [博客](/blog) · [Triplex架构分析](/zh-SG/architecturalanalysis) · [GitHub 仓库](https://github.com/triplexlabs/triplex)
+</div>
+
+<Features lang={props.params.lang} title={metadata.title} />
+
+## 它是如何工作的？
+
+```jsx
+import { useAccount } from '@triplexjs/hooks'
+
+// 获取账户余额，流动性、仓位等
+const { data } = useAccount()
+```
+
+Triplex的前端集成实现了直观的用户体验。通过使用我们的React hooks，您可以轻松地将Triplex功能集成到您的应用程序中。
+
+```jsx
+import { useMarket } from '@triplexjs/hooks'
+
+// 获取市场数据
+const { data } = useMarket('BTC-trtUSD')
+```
+
+## 生态系统
+
+Triplex是由多个核心组件构成的：保险库、资金池、市场和奖励分配器。这些组件共同工作，为用户提供了高度灵活的DeFi体验。
+
+我们不断发展的生态系统包括：
+
+- 永续合约交易
+- 杠杆代币
+- 合成资产
+- 治理
+- 各种集成选项
+
+<Callout>
+  加入Triplex社区，了解最新动态和参与平台发展！
+</Callout>
+
+<div className="mt-16 mb-20 text-center">
+  [开始使用](/zh-SG/docs/getting-started) · [示例](/zh-SG/examples/basic) · [博客](/blog) · [团队](/zh-SG/team)
+</div>
+
+<div className="mt-32 flex flex-wrap gap-3 items-center">
+  <img alt="stars" src="https://badgen.net/github/stars/triplexlabs/triplex" />
+  <img alt="license" src="https://badgen.net/npm/license/swr" />
+</div>
+
+<div className="mb-10 mt-4 text-gray-600 dark:text-gray-400 text-sm">
+  Triplex V3于2024年由Triplex Labs Inc.重新设计并在Aptos上推出。
+</div>
