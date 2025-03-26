@@ -4,8 +4,8 @@ export default {
   dark: '深色',
   light: '浅色',
   system: '系统',
-  backToTop: '回到顶部',
-  lastUpdated: '最后更新于',
+  backToTop: '返回顶部',
+  lastUpdated: '最后更新于2025年3月',
   logo: {
     title: '去中心化流动性协议'
   },

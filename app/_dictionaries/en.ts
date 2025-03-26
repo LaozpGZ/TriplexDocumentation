@@ -3,7 +3,7 @@ export default {
   light: 'Light',
   system: 'System',
   backToTop: 'Scroll to top',
-  lastUpdated: 'Last updated on',
+  lastUpdated: 'Last updated on March 2025',
   logo: {
     title: 'Decentralized Liquidity Protocol'
   },
