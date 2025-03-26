@@ -17,11 +17,11 @@ export default {
   lightweight: '高效',
   realtime: '实时',
   suspense: '流畅',
-  pagination: '分页',
-  backendAgnostic: '跨链兼容',
+  pagination: '资本优化',
+  backendAgnostic: '可组合DeFi',
   renderingStrategies: '模块化架构',
   typescript: 'Move语言',
-  remoteLocal: '链上 + 链下',
+  remoteLocal: '完全链上',
   editPage: '在 GitHub 上编辑此页面',
   by: '由'
 } satisfies Dictionary 
